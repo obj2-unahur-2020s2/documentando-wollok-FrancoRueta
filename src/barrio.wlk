@@ -1,4 +1,7 @@
 class Barrio {
+
+	#Las respuestas son las que estan arriba de cada linea de codigo, no debajo
+	
 	#elem ==> list
 	const property elementos = []
 
@@ -10,12 +13,13 @@ class Barrio {
 	method sacarElemento(elemento) {
 		elementos.remove(elemento)
 	}
-	#retorna elementos
+	#retorna elementos #NO, retorna un int.
 	method elementosBuenos() {
 		return elementos.count{ e => e.esBueno() }
 	}
-	#retorna elementos
+	#retorna elementos #No, retorna un int.
 	method elementosMalos() = elementos.count{ e => not e.esBueno() }
+	
 	#retorna bool
 	method esCopado() {
 		return self.elementosBuenos() > self.elementosMalos()
